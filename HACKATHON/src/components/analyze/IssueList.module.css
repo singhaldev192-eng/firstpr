@@ -1,0 +1,262 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Search Box */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 7px 12px;
+  transition: border-color var(--transition-fast);
+}
+
+.searchBox:focus-within {
+  border-color: var(--accent-violet);
+  box-shadow: 0 0 0 1px var(--accent-violet);
+}
+
+.searchIcon {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.825rem;
+}
+
+.searchInput::placeholder {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.clearSearchBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clearSearchBtn:hover {
+  color: var(--text-main);
+}
+
+/* Filter Chips */
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.filterChip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.filterChip:hover {
+  border-color: var(--border-medium);
+  color: var(--text-main);
+}
+
+.filterChipActive {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-violet);
+  color: #DDD6FE;
+  font-weight: 600;
+}
+
+/* Count */
+.countSummary {
+  font-size: 0.725rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+/* Issue List */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 720px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.issueCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.issueCard:hover {
+  background: #121A2B;
+  border-color: var(--border-medium);
+}
+
+.issueCardSelected {
+  background: #141D30 !important;
+  border-color: var(--accent-violet) !important;
+  box-shadow: 0 0 0 1px var(--accent-violet);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.openIcon {
+  color: #34D399;
+}
+
+.issueNumber {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.commentsBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+}
+
+.issueTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.725rem;
+}
+
+.authorText {
+  color: var(--text-dim);
+}
+
+.difficultyTag {
+  font-size: 0.675rem;
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-subtle);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.labelsRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.labelPill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  padding: 1px 5px;
+  border-radius: var(--radius-xs);
+}
+
+.moreLabels {
+  font-size: 0.65rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+/* Empty State */
+.emptyState {
+  padding: 32px 16px;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1px dashed var(--border-medium);
+  border-radius: var(--radius-sm);
+}
+
+.emptyTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.emptySubtitle {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.resetBtn {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+

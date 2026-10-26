@@ -1,0 +1,177 @@
+.section {
+  padding-top: 72px;
+  padding-bottom: 80px;
+  position: relative;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto 44px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.685rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-violet-light);
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 700;
+  color: #F8FAFC;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Integrated Pipeline Workbench */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pipelinePhase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 20px;
+  border-right: 1px solid var(--border-subtle);
+  background: #0E1422;
+  transition: background-color var(--transition-fast);
+}
+
+.pipelinePhase:last-child {
+  border-right: none;
+}
+
+.pipelinePhase:hover {
+  background: #11182B;
+}
+
+/* Phase Header */
+.phaseHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.stepBadge {
+  font-family: var(--font-mono);
+  font-size: 0.685rem;
+  font-weight: 600;
+  color: #C4B5FD;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+}
+
+.stepMetaBadge {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Phase Content */
+.phaseContent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.iconRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.iconBox {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.phaseIcon {
+  color: #C4B5FD;
+}
+
+.phaseTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.phaseDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+
+/* Phase Technical Annotation */
+.phaseFooter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.725rem;
+  color: var(--text-dim);
+  font-family: var(--font-mono);
+}
+
+.terminalIcon {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.detailText {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+  .pipeline {
+    grid-template-columns: 1fr;
+  }
+
+  .pipelinePhase {
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .pipelinePhase:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,189 @@
+.header {
+  border-bottom: 1px solid var(--border-subtle);
+  background: #0B101C;
+  padding-bottom: 20px;
+}
+
+/* Demo Banner */
+.demoBanner {
+  background: rgba(245, 158, 11, 0.08);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.775rem;
+}
+
+.bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.demoPill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: rgba(245, 158, 11, 0.2);
+  color: #FBBF24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.bannerText {
+  color: #FDE68A;
+}
+
+.bannerSubtext {
+  color: var(--text-dim);
+  font-size: 0.725rem;
+}
+
+/* Header Main Bar */
+.headerBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.leftCol {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.backButton:hover {
+  color: var(--text-main);
+  border-color: var(--border-medium);
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.githubIcon {
+  color: var(--text-muted);
+}
+
+.ownerText {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+.slash {
+  color: var(--border-medium);
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+}
+
+.repoText {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.metaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.starIcon {
+  color: #FBBF24;
+}
+
+.branchIcon {
+  color: #A78BFA;
+}
+
+.githubButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+
+.githubButton:hover {
+  border-color: var(--border-medium);
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.description {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-top: 6px;
+  max-width: 800px;
+}
+
+@media (max-width: 640px) {
+  .headerBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metaRow {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs {
+    flex-wrap: wrap;
+  }
+}
+

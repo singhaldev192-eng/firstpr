@@ -1,0 +1,57 @@
+.exportBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #080C16;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+}
+
+.exportInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.775rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.fileIcon {
+  color: var(--text-dim);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.actionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xs);
+  padding: 4px 10px;
+  font-family: var(--font-sans);
+  font-size: 0.725rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.actionBtn:hover {
+  border-color: var(--accent-violet);
+  color: var(--text-main);
+  background: rgba(139, 92, 246, 0.15);
+}
+
+.checkIcon {
+  color: #34D399;
+}
+

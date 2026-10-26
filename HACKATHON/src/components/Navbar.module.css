@@ -1,0 +1,214 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--nav-height);
+  background-color: rgba(9, 13, 22, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.headerScrolled {
+  background-color: rgba(9, 13, 22, 0.92);
+  border-bottom-color: var(--border-subtle);
+}
+
+.navContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Wordmark */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  user-select: none;
+}
+
+.brandIconWrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-fast);
+}
+
+.brand:hover .brandIconWrapper {
+  border-color: var(--accent-violet);
+}
+
+.brandIcon {
+  color: #C4B5FD;
+}
+
+.brandName {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.brandAccent {
+  color: var(--accent-violet);
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  padding: 4px 6px;
+}
+
+.navLink:hover {
+  color: var(--text-main);
+}
+
+.navDivider {
+  width: 1px;
+  height: 14px;
+  background-color: var(--border-subtle);
+  margin: 0 2px;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+  padding: 4px 6px;
+}
+
+.githubLink:hover {
+  color: var(--text-main);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  color: #FFFFFF;
+  background-color: #7C3AED;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.ctaButton:hover {
+  background-color: #6D28D9;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ctaArrow {
+  transition: transform var(--transition-fast);
+}
+
+.ctaButton:hover .ctaArrow {
+  transform: translateX(2px);
+}
+
+/* Mobile Toggle */
+.mobileMenuButton {
+  display: none;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  color: var(--text-main);
+  padding: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background-color: #0E1422;
+    border-bottom: 1px solid var(--border-medium);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
+  }
+
+  .mobileMenuContent {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px 24px;
+    gap: 14px;
+  }
+
+  .mobileNavLink {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 6px 0;
+  }
+
+  .mobileGithubLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 6px 0;
+  }
+
+  .mobileCtaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #7C3AED;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+}

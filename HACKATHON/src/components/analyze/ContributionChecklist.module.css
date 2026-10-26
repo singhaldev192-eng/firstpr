@@ -1,0 +1,354 @@
+.checklistSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sectionHeading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.subheading {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 520px;
+}
+
+.progressGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.progressText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+}
+
+.countText {
+  color: var(--text-muted);
+}
+
+.percentText {
+  color: #A78BFA;
+  font-weight: 600;
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-violet) 0%, #34D399 100%);
+  border-radius: 2px;
+  transition: width 200ms ease-out;
+}
+
+.resetBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-end;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.resetBtn:hover {
+  color: var(--text-main);
+}
+
+/* Steps List */
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stepCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.stepCard:hover {
+  border-color: var(--border-medium);
+}
+
+.stepCardExpanded {
+  border-color: rgba(139, 92, 246, 0.3);
+  background: #0E1526;
+}
+
+.stepCardDone {
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.stepHeader:focus-visible {
+  outline: 2px solid var(--accent-violet);
+}
+
+/* Custom Checkbox */
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-medium);
+  background: rgba(255, 255, 255, 0.04);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.checkbox:hover {
+  border-color: var(--accent-violet);
+}
+
+.checkboxChecked {
+  background: #10B981;
+  border-color: #10B981;
+}
+
+.stepIndex {
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: #C4B5FD;
+  flex-shrink: 0;
+}
+
+.stepTitleBox {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stepTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.stepTitleDone {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.stepFileSubtext {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevronIcon {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+/* Step Expanded Body */
+.stepBody {
+  padding: 0 14px 14px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 150ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stepDetailText {
+  font-size: 0.825rem;
+  color: #E2E8F0;
+  line-height: 1.5;
+}
+
+/* Target File */
+.targetFileRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.targetLabel {
+  font-size: 0.725rem;
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.filePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #080C16;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  color: #93C5FD;
+}
+
+.codeIcon {
+  color: var(--text-dim);
+}
+
+.miniCopyBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+}
+
+.miniCopyBtn:hover {
+  color: var(--text-main);
+}
+
+/* Command Row */
+.commandRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #080C16;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 5px 10px;
+}
+
+.commandBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.termIcon {
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+
+.cmdText {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #CBD5E1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyCmdBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 2px 7px;
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.copyCmdBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+}
+
+.copiedIcon {
+  color: #34D399;
+}
+
+/* Guidance Note */
+.guidanceBox {
+  background: rgba(139, 92, 246, 0.05);
+  border-left: 2px solid var(--accent-violet);
+  padding: 8px 12px;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.guidanceTitle {
+  font-family: var(--font-mono);
+  font-size: 0.685rem;
+  font-weight: 600;
+  color: var(--accent-violet-light);
+  display: block;
+  margin-bottom: 3px;
+}
+
+.guidanceText {
+  font-size: 0.8rem;
+  color: #E2E8F0;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .stepBody {
+    padding-left: 14px;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .progressGroup {
+    width: 100%;
+  }
+}

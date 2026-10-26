@@ -1,0 +1,210 @@
+.detailCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.idGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.openBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34D399;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+}
+
+.openIcon {
+  color: #34D399;
+}
+
+.issueId {
+  font-family: var(--font-mono);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 3px 8px;
+  transition: all var(--transition-fast);
+}
+
+.githubLink:hover {
+  color: var(--text-main);
+  border-color: var(--border-medium);
+}
+
+.issueTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.authorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.775rem;
+  color: var(--text-dim);
+}
+
+.authorRow strong {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.dot {
+  color: var(--border-medium);
+}
+
+.labelsRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.labelChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xs);
+  padding: 2px 7px;
+  font-family: var(--font-mono);
+  font-size: 0.675rem;
+  color: var(--text-muted);
+}
+
+.tagIcon {
+  color: var(--text-dim);
+}
+
+/* AI Overview Card */
+.aiOverviewCard {
+  background: #0B101C;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.aiHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aiTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sparkleIcon {
+  color: var(--accent-violet-light);
+}
+
+.aiHeading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #DDD6FE;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.groundedPill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-subtle);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+}
+
+.aiSummary {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.techStrip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+
+.techLabel {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.techVal {
+  color: var(--text-main);
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+}
+
+@media (max-width: 640px) {
+  .detailCard {
+    padding: 16px;
+  }
+}
+
